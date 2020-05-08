@@ -18,14 +18,14 @@
 </head>
 
 <body style = "margin-left: 200px; margin-right: 200px">
-<h1>Robinhood Analysis</h1>
+<h1 style ="font-size:60px">Robinhood Analysis</h1>
 <p > The Robinhood data we were given contained information on the various community partner programs such as "pre-program hourly wage",
   "No. of individuals who completed training", "No. of applicants". Shown bellow are what features seemed most important in improving
-   job placements, visualizations for the programs, and an analysis of how each program is doing. <br><br>
- This work is presented with how the analysis was completed, with the python code omitted.</p>
+   job placements, visualizations for the programs, and an analysis of how each program is doing. </p>
+   <p style="text-align: center; color:MediumSeaGreen;"> ----This work is presented with how the analysis was completed, with the python code omitted.----</p>
 
-<p>To determine which community partners perform well, we specifically look at two metrics: employment rate at the end of program and job retention.</p>
-<h2>Data Preproccessing </h2>
+<p><br>To determine which community partners perform well, we specifically look at two metrics: employment rate at the end of program and job retention.</p>
+<h2># Data Preproccessing </h2>
 <h2> Correlation Analysis Between Variables</h2>
 
 <p> In this section we look at the correlation of the features (shown on the left side of the grid bellow) with the labels (%placed, %fulltime, and %temporary).
@@ -36,10 +36,10 @@
   <img src="chart1.png" alt="chart1" class="center">
 
 
-  <h2>Prepare Dataset for Machine Learning</h2>
+  <h2> # Prepare Dataset for Machine Learning</h2>
   <p>Here the Dataset is split up appropriately to use with various models.</p>
 
-  <h2>  Training</h2>
+  <h2> # Training</h2>
   <p> Here the prepared dataset is run with the various models (Lasso, SVM, RF, and XGB).</p>
   <img src="chart2.png" alt="" class="center"/>
   <p>From the table above, we can see that XGBoost and Random Forests are the two models that perform well on this task. </p>
