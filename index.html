@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
 
-  <title>The HTML5 Herald</title>
+  <title>Robinhood Program Analysis</title>
   <meta name="description" content="The HTML5 Herald">
   <meta name="author" content="SitePoint">
 
@@ -20,7 +20,7 @@
  This work is presented with how the analysis was completed, with the python code omitted.</p>
 
 <p>To determine which community partners perform well, we specifically look at two metrics: employment rate at the end of program and job retention.</p>
-<h2>##Data Preproccessing </h2>
+<h2>Data Preproccessing </h2>
 <h2> Correlation Analysis Between Variables</h2>
 
 <p> In this section we look at the correlation of the features (shown on the left side of the grid bellow) with the labels (%placed, %fulltime, and %temporary).
@@ -31,13 +31,14 @@
   <img src="chart1.png" alt="" />
 
 
-  <h2>  Prepare Dataset for Machine Learning</h2>
-  <p> Here the Dataset is split up appropriately to use with various models.</p>
+  <h2>Prepare Dataset for Machine Learning</h2>
+  <p>Here the Dataset is split up appropriately to use with various models.</p>
 
   <h2>  Training</h2>
   <p> Here the prepared dataset is run with the various models (Lasso, SVM, RF, and XGB).</p>
   <img src="chart2.png" alt="" />
   <p>From the table above, we can see that XGBoost and Random Forests are the two models that perform well on this task. </p>
+
   <h2>Gathering Results into a Heatmap</h2>
   <p> Here we get the feature importances from the RF model. The feature importance grid allows us to see which features were
      the most useful in predicting the labels (% placed, % fulltime, %temporary). From this grid, it is seen that
@@ -45,30 +46,32 @@
      <img src="chart3.png" alt="" />
 
     <h1> Analysis with Demographic Data</h1>
-<p> Shown bellow is the gender distribution for the various community programs. The pie charts are sorted from highest %
-  female to least %female. In this visualization it is seen that CP19 and CP10 consist of only females.</p>
-  <img src="newplot.png" alt="" />
-  <p> Shown bellow is the criminal record distribution for the various community programs. The pie charts are sorted from least % criminal
+    <p> Shown bellow is the gender distribution for the various community programs. The pie charts are sorted from highest %
+      female to least %female. In this visualization it is seen that CP19 and CP10 consist of only females.</p>
+      <img src="newplot.png" alt="" />
+
+      <p> Shown bellow is the criminal record distribution for the various community programs. The pie charts are sorted from least % criminal
     record to highest % criminal record. In this visualization it is seen that CP17 stands out as containing only members with a criminal degree.</p>
     <img src="newplot(1).png" alt="" />
 
     <p> Shown bellow is the distribution of the level of eduction for the community programs. In the shades of pink, light pink is those with no high
        school diploma ranging to dark purple for those with a college degree. From this visualization it is clear that CP9 stands out as having only
        members with a college degree.</p>
-         <img src="newplot(2).png" alt="" />
+       <img src="newplot(2).png" alt="" />
 
- <img src="chart4.png" alt="" />
+       <img src="chart4.png" alt="" />
+
     <p> From the plot of feature importance we found that "% completed training" and "Pre program hourly wage" predicted "% placed" the best. <br><br>
       So shown bellow in the first graph is the "% completed training" in relationship to the "% placed in job" for all the community programs. For
       "% fulltime job" each community program is shown in a different color. The colors can be clicked on to select or deselect the program from the
        chart. For the community programs, it is clear that those with a higher "% completed training" had a higher "% placed". On the other hand,
         there seemed to be less of a correlation between "% completed training" for those placed in temporary jobs.</p>
-        <iframe  width="1200" height="500" src="interactive1.html" seamless></iframe>
-        <iframe  width="1200" height="500" src="interactive2.html" seamless></iframe>
+        <iframe  width="1400" height="600" src="interactive1.html" seamless></iframe>
+        <iframe  width="1525" height="920" src="interactive2.html" seamless></iframe>
 
-<p>Finally, we would like to determine how well each of the programs are performing respective to how well the model predicts they should be performing.
-   Prediction Error is used as a metric to determine how much a program's performance differs from the expected performance of the program. This analysis
-    will help Robinhood determine whether they should provide more funds to a particular program if it is performing bellow how it is "expected" to perform.</p>
+        <p>Finally, we would like to determine how well each of the programs are performing respective to how well the model predicts they should be performing.
+          Prediction Error is used as a metric to determine how much a program's performance differs from the expected performance of the program. This analysis
+          will help Robinhood determine whether they should provide more funds to a particular program if it is performing bellow how it is "expected" to perform.</p>
 
     <img src="chart5.png" alt="" />
 
